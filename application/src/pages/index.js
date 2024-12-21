@@ -9,6 +9,7 @@ import Image2 from "../images/space.svg";
 import InfoSectionLight from "../components/infoSectionLight";
 import Services from "../components/services";
 import Footer from "../components/footer";
+import ShowcaseSection from "../components/showCaseSection";
 
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +31,7 @@ export const Home = () => {
         text="Whether you're building a stunning portfolio, an e-commerce platform, or a dynamic web application, our team of expert developers delivers modern, scalable, and user-friendly solutions. Let us help you create the digital presence your business deserves."
         btnText="Get Started Now"
       />
+      <ShowcaseSection />
       <InfoSectionLight
         image={Image2}
         id="discover"

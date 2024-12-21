@@ -7,6 +7,7 @@ import {
   HeroBtnWrapper,
   ArrowForward,
   ArrowRight,
+  HeroSubTitle,
 } from "./HeroElements";
 import { ButtonR } from "../ButtonElements";
 import Video from "../../videos/bgvideo.mp4";
@@ -26,10 +27,13 @@ const HeroSection = () => {
       </HeroBg>
       <HeroContent>
         <h1 className="h1-hero">Build Your Vision with Ease</h1>
-        <p className="hero-text">
-          Join today and unlock $250 in credits to kickstart your next
-          successful web development project.
-        </p>
+        <HeroSubTitle>
+          <span>DEVELOP</span>
+          <span>·</span>
+          <span>MARKET</span>
+          <span>·</span>
+          <span>GROW</span>
+        </HeroSubTitle>
         <HeroBtnWrapper>
           <ButtonR
             to="/signin"

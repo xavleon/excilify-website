@@ -30,7 +30,6 @@ export const NavbarContainer = styled.div`
   max-width: 1100px;
 `;
 export const NavLogo = styled(LinkR)`
-  //color: #B05FFD;
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -40,10 +39,43 @@ export const NavLogo = styled(LinkR)`
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
-  transition: all ease 0.2s;
+  position: relative;
+  padding: 4px 0;
+
+  .angle-bracket {
+    color: #fff;
+    transition: color 0.2s ease;
+  }
+
+  .logo-text {
+    color: #fff;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+
+  /* Override any default link colors */
+  &,
+  &:link,
+  &:visited {
+    color: #fff;
+    text-decoration: none;
+  }
 
   &:hover {
-    color: #b05ffd;
+    color: #ffd700;
+    text-decoration: none;
+
+    .angle-bracket {
+      color: #ffd700;
+    }
+
+    .logo-text {
+      color: #ffffff;
+    }
+
+    .logo-text::after {
+      width: 100%;
+    }
   }
 `;
 
@@ -90,13 +122,27 @@ export const NavLinks = styled(LinkS)`
   height: 100%;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  position: relative;
 
-  &.active {
-    border-bottom: 3px solid #b05ffd;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 25%; // Try using percentage instead of fixed pixels
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+  }
+
+  /* Handle the width of the underline to match the text */
+  &:hover::after {
+    width: calc(100% - 2rem); // Accounting for padding
+    margin: 0 1rem; // Center the underline within the padding
   }
 
   &:hover {
-    color: #b05ffd;
+    color: #fff;
   }
 `;
 export const NavBtn = styled.nav`
@@ -104,26 +150,42 @@ export const NavBtn = styled.nav`
   align-items: center;
   @media screen and (max-width: 768px) {
     display: none;
+    sp
+    
   }
 `;
 
 export const NavBtnLink = styled(LinkR)`
-  border-radius: 50px;
-  text-decoration: none;
-  background: #b05ffd;
-  white-space: nowrap;
-  padding: 10px 22px;
-  color: #010606;
+  background-color: #333333;
+  color: #ffd700;
+  border: 1.5px solid #ffd700;
+  padding: 8px 25px;
   font-size: 1rem;
-  outline: none;
-  border: none;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-weight: 900;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+  border-radius: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
 
   &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #b05ffd;
+    color: #333333;
+  }
+
+  &:hover::before {
+    width: 100%;
   }
 `;
