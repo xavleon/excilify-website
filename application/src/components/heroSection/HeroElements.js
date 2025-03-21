@@ -81,12 +81,14 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
 `;
 
 export const HeroSubTitle = styled.div`
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
 
   span {
     color: #ffffff;
@@ -94,7 +96,12 @@ export const HeroSubTitle = styled.div`
 
     &:nth-child(2),
     &:nth-child(4) {
-      color: #ffff00;
+      color: #FFD700;
     }
+  }
+  
+  @media screen and (max-width: 480px) {
+    font-size: 0.9rem;
+    gap: 0.5rem;
   }
 `;

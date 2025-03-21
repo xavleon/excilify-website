@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../App.css";
+import { Link } from "react-router-dom";
 import { 
   InfoContainer, 
   InfoWrapper, 
@@ -16,7 +17,7 @@ import {
 } from "./InfoElements";
 import { PremiumButton } from "../ButtonElements";
 
-export const InfoSection = ({ id, title, subtitle, text, image, btnText }) => {
+export const InfoSection = ({ id, title, subtitle, text, image, btnText, buttonLink }) => {
   return (
     <>
       <InfoContainer id={id}>
@@ -32,16 +33,24 @@ export const InfoSection = ({ id, title, subtitle, text, image, btnText }) => {
                 <Subtitle>{subtitle}</Subtitle>
                 <Title className="text-white">{title}</Title>
                 <InfoText>{text}</InfoText>
-                <PremiumButton 
-                  to={id} 
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  {btnText}
-                </PremiumButton>
+                {buttonLink ? (
+                  <Link to={buttonLink} style={{ textDecoration: 'none' }}>
+                    <PremiumButton as="div">
+                      {btnText}
+                    </PremiumButton>
+                  </Link>
+                ) : (
+                  <PremiumButton 
+                    to={id} 
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                  >
+                    {btnText}
+                  </PremiumButton>
+                )}
               </TextWrapper>
             </div>
             <div className="col-lg-6 col-sm-12 img-wrap">

@@ -14,6 +14,7 @@ import {
   CircleAccent
 } from "./infoElements";
 import { PremiumLightButton } from "../ButtonElements";
+import { Link } from "react-router-dom";
 
 export const InfoSectionLight = ({
   id,
@@ -22,6 +23,7 @@ export const InfoSectionLight = ({
   text,
   image,
   btnText,
+  buttonLink
 }) => {
   return (
     <>
@@ -43,16 +45,25 @@ export const InfoSectionLight = ({
                 <Subtitle>{subtitle}</Subtitle>
                 <Title>{title}</Title>
                 <Description>{text}</Description>
-                <PremiumLightButton 
-                  to={id}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  {btnText}
-                </PremiumLightButton>
+                {buttonLink ? (
+                  <PremiumLightButton 
+                    as={Link}
+                    to={buttonLink}
+                  >
+                    {btnText}
+                  </PremiumLightButton>
+                ) : (
+                  <PremiumLightButton 
+                    to={id}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                  >
+                    {btnText}
+                  </PremiumLightButton>
+                )}
               </TextWrapper>
             </div>
           </div>

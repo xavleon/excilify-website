@@ -30,6 +30,7 @@ export const Home = () => {
         title="Innovative Solutions for Modern Businesses"
         text="We craft high-performance websites and applications that drive results. Our expert team combines cutting-edge technology with strategic design to deliver solutions that are fast, responsive, and scalable. From startups to enterprises, we create digital experiences that help you outperform the competition."
         btnText="Our Approach"
+        buttonLink="/approach"
       />
       <ShowcaseSection />
       <InfoSectionLight
@@ -48,6 +49,7 @@ export const Home = () => {
         title="Data-Driven Campaigns That Deliver Results"
         text="Elevate your online presence with our comprehensive digital marketing solutions. We develop tailored strategies across SEO, content marketing, social media, and paid advertising to increase your visibility and drive qualified traffic. Our analytical approach ensures continuous optimization for maximum ROI on your marketing investment."
         btnText="Marketing Services"
+        buttonLink="/marketing"
       />
       <Footer />
     </>

@@ -255,7 +255,9 @@ export const PremiumButton = styled(LinkS)`
   }
 `;
 
-export const PremiumLightButton = styled(LinkS)`
+export const PremiumLightButton = styled(LinkS).attrs(props => ({
+  as: props.as || LinkS
+}))`
   background-color: #FFD700;
   color: #111;
   padding: 14px 32px;
