@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.div`
   padding-top: 30px;
   padding-bottom: 15px;
-  background: linear-gradient(#150b1f, #000);
+  background: linear-gradient(to bottom, #0c0c0c 0%, #080808 100%);
 `;
 
 export const FooterWrapper = styled.div`
@@ -25,6 +25,6 @@ export const FooterLink = styled.a`
   transition: all 0.3s;
 
   &:hover {
-    color: #b05ffd;
+    color: #FFD700;
   }
 `;

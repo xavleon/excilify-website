@@ -26,28 +26,28 @@ export const Home = () => {
       <InfoSection
         image={Image1}
         id="about"
-        subtitle="Digital Innovation for Your Success"
-        title="cutting-edge web development services, tailored to your needs."
-        text="Whether you're building a stunning portfolio, an e-commerce platform, or a dynamic web application, our team of expert developers delivers modern, scalable, and user-friendly solutions. Let us help you create the digital presence your business deserves."
-        btnText="Get Started Now"
+        subtitle="Expert Web Development"
+        title="Innovative Solutions for Modern Businesses"
+        text="We craft high-performance websites and applications that drive results. Our expert team combines cutting-edge technology with strategic design to deliver solutions that are fast, responsive, and scalable. From startups to enterprises, we create digital experiences that help you outperform the competition."
+        btnText="Our Approach"
       />
       <ShowcaseSection />
       <InfoSectionLight
         image={Image2}
         id="discover"
-        subtitle="Transforming Ideas Into Digital Reality"
-        title="stunning websites and seamless user experiences."
-        text="From concept to launch, we specialize in creating modern, responsive, and visually appealing websites. Our team ensures that your digital presence not only looks amazing but also performs flawlessly. Let’s bring your vision to life with cutting-edge technology and innovative designs."
-        btnText="Explore"
+        subtitle="Creative Design & UX"
+        title="Captivating Experiences That Convert"
+        text="Our design philosophy blends aesthetics with functionality to create intuitive user experiences. We focus on creating websites that not only look exceptional but also drive engagement and conversions. Every design element is strategically implemented to enhance your brand's digital presence and achieve your business goals."
+        btnText="View Portfolio"
       />
       <Services />
       <InfoSectionLight
         image={Image1}
-        id="#"
-        subtitle="Elevate Your Brand Identity"
-        title="Strengthen your media presence with innovative strategies and fresh designs."
-        text="Whether you’re looking to rebrand or establish a strong digital footprint, we specialize in creating impactful media marketing campaigns and brand strategies. From social media optimization to a complete visual rebranding, our solutions are tailored to set your business apart and connect with your audience like never before."
-        btnText="Discover Our Solutions"
+        id="marketing"
+        subtitle="Strategic Digital Marketing"
+        title="Data-Driven Campaigns That Deliver Results"
+        text="Elevate your online presence with our comprehensive digital marketing solutions. We develop tailored strategies across SEO, content marketing, social media, and paid advertising to increase your visibility and drive qualified traffic. Our analytical approach ensures continuous optimization for maximum ROI on your marketing investment."
+        btnText="Marketing Services"
       />
       <Footer />
     </>

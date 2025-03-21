@@ -8,9 +8,60 @@
   font-family: "Encode Sans Expanded", sans-serif;
 }
 
-.logo-text {
-  font: "Josefin Sans";
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
 
+.logo-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 1.2px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.logo-separator {
+  height: 2px;
+  width: 100%;
+  background-color: #FFD700;
+  margin: 4px 0;
+}
+
+.logo-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.angle-bracket {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  color: #FFD700 !important;
+  position: relative;
+}
+
+.angle-bracket:first-child {
+  margin-right: 3px;
+}
+
+.angle-bracket:last-child {
+  margin-left: 3px;
 }
 
 .center-align {
@@ -28,7 +79,7 @@
 }
 
 .primary-bg {
-  background: #B05FFD;
+  background: #FFD700;
 
 }
 
@@ -55,16 +106,41 @@
 
 }
 
+.hero-description {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 16px;
+  max-width: 600px;
+  line-height: 1.4;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+  
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+  }
+}
+
 .img-wrap {
   height: 100%;
   max-width: 700px;
   margin: auto;
-
+  padding: 20px;
+  position: relative;
 }
 
 .fit-img {
   width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.fit-img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .expand-row {
@@ -89,4 +165,18 @@
 
 .pr {
   padding-right: 20px;
+}
+
+.logo-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #FFD700;
+  border-radius: 50%;
+  margin-left: 4px;
+  position: relative;
+}
+
+.nav-active {
+  color: #FFD700 !important;
 }

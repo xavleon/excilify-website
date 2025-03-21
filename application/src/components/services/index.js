@@ -7,6 +7,7 @@ import {
   ServicesIcon,
   ServicesH2,
   ServicesP,
+  SectionDivider
 } from "./ServicesElements";
 import Icon1 from "../../images/space.svg";
 import Icon2 from "../../images/online.svg";
@@ -15,33 +16,28 @@ import Icon3 from "../../images/real-time.svg";
 const Services = () => {
   return (
     <ServicesContainer id="services">
-      <ServicesH1>Our Services</ServicesH1>
+      <SectionDivider />
+      <ServicesH1>Our Expertise</ServicesH1>
       <ServicesWrapper>
         <ServicesCard>
           <ServicesIcon src={Icon1} />
-          <ServicesH2>Creative Brand Design</ServicesH2>
+          <ServicesH2>Brand Design & Identity</ServicesH2>
           <ServicesP>
-            Whether you're starting fresh or looking to rebrand, we craft logos,
-            color palettes, and visual elements that resonate with your
-            audience.
+            We create eye-catching brand looks that help you stand out from competitors. This includes designing your logo, choosing your colors, creating your message, and building all the visuals that make your business instantly recognizable.
           </ServicesP>
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src={Icon2} />
-          <ServicesH2>Digital Marketing Mastery</ServicesH2>
+          <ServicesH2>Online Marketing That Works</ServicesH2>
           <ServicesP>
-            Boost your online presence with marketing strategies. From SEO to
-            social media campaigns, we ensure your brand reaches the right
-            audience effectively.
+            We help more customers find you online using proven marketing techniques. This includes improving your Google rankings, creating engaging content, running targeted ads, managing social media, and building email campaigns that bring real results.
           </ServicesP>
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src={Icon3} />
-          <ServicesH2>Cutting-Edge Web Development</ServicesH2>
+          <ServicesH2>Modern Websites & Apps</ServicesH2>
           <ServicesP>
-            Build fast, responsive, and feature-rich websites with the latest
-            technologies. We follow modern best practices to enhance user
-            experience.
+            We build fast, user-friendly websites and apps that look great on any device. Whether you need an online store, a business website, or a custom app, we create reliable digital solutions that grow with your business and keep your information secure.
           </ServicesP>
         </ServicesCard>
       </ServicesWrapper>

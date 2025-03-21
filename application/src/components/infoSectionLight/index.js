@@ -1,8 +1,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../App.css";
-import { InfoContainer, InfoWrapper, Subtitle, Title } from "./infoElements";
-import { ButtonBasicInv } from "../ButtonElements";
+import { 
+  InfoContainer, 
+  InfoWrapper, 
+  Subtitle, 
+  Title, 
+  TextWrapper, 
+  Description, 
+  ImageWrapper,
+  SectionDivider,
+  YellowSquareAccent,
+  CircleAccent
+} from "./infoElements";
+import { PremiumLightButton } from "../ButtonElements";
 
 export const InfoSectionLight = ({
   id,
@@ -14,19 +25,35 @@ export const InfoSectionLight = ({
 }) => {
   return (
     <>
-      <InfoContainer id={id} className="bg-white">
+      <InfoContainer id={id}>
+        <SectionDivider />
+        <YellowSquareAccent className="top-left" />
+        <YellowSquareAccent className="bottom-right" />
+        <CircleAccent className="top-right" />
+        <CircleAccent className="bottom-left" />
         <InfoWrapper>
           <div className="row expand-row gx-5">
-            <div className="col-lg-6 col-sm-12 img-wrap">
-              <img src={image} alt="" className="fit-img"></img>
+            <div className="col-lg-6 col-sm-12">
+              <ImageWrapper>
+                <img src={image} alt="" className="fit-img" />
+              </ImageWrapper>
             </div>
             <div className="col-lg-6 col-sm-12 my-auto">
-              <Subtitle>{subtitle}</Subtitle>
-              <Title className="text-black mb-5">{title}</Title>
-              <p className="text-black mb-4">{text}</p>
-              <ButtonBasicInv to="" primary="false" dark="true" className="mx-auto">
-                {btnText}
-              </ButtonBasicInv>
+              <TextWrapper>
+                <Subtitle>{subtitle}</Subtitle>
+                <Title>{title}</Title>
+                <Description>{text}</Description>
+                <PremiumLightButton 
+                  to={id}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  {btnText}
+                </PremiumLightButton>
+              </TextWrapper>
             </div>
           </div>
         </InfoWrapper>

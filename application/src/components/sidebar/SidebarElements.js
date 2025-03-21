@@ -34,6 +34,38 @@ export const Icon = styled.div`
 
 export const SidebarWrapper = styled.div`
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  
+  .sidebar-logo {
+    margin-bottom: 50px;
+    align-items: center;
+    
+    .logo-brand {
+      font-size: 32px;
+    }
+    
+    .logo-separator {
+      width: 85%;
+      margin: 6px 0;
+      height: 2px;
+    }
+    
+    .logo-tagline {
+      font-size: 14px;
+    }
+  }
+  
+  .logo-text {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .mb-5 {
+    margin-bottom: 3rem;
+  }
 `;
 
 export const SidebarMenu = styled.ul`

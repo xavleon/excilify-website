@@ -33,24 +33,23 @@ export const NavLogo = styled(LinkR)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
-  font-size: 1.5rem;
   display: flex;
   align-items: center;
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
   position: relative;
-  padding: 4px 0;
+  padding: 12px 0;
+  transition: all 0.3s ease;
 
-  .angle-bracket {
-    color: #fff;
-    transition: color 0.2s ease;
+  .logo-container {
+    padding: 3px 0;
+    transition: all 0.3s ease;
+    min-width: 200px;
   }
 
-  .logo-text {
-    color: #fff;
-    position: relative;
-    transition: color 0.2s ease;
+  .logo-separator {
+    transition: all 0.3s ease;
   }
 
   /* Override any default link colors */
@@ -62,19 +61,14 @@ export const NavLogo = styled(LinkR)`
   }
 
   &:hover {
-    color: #ffd700;
     text-decoration: none;
-
-    .angle-bracket {
-      color: #ffd700;
+    
+    .logo-separator {
+      background-color: #ffffff;
     }
-
-    .logo-text {
-      color: #ffffff;
-    }
-
-    .logo-text::after {
-      width: 100%;
+    
+    .logo-brand {
+      color: #FFD700;
     }
   }
 `;
@@ -111,6 +105,18 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 80px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:first-child {
+    margin-left: 0;
+  }
+  
+  &:last-child {
+    margin-right: 0;
+  }
 `;
 
 export const NavLinks = styled(LinkS)`
@@ -118,74 +124,100 @@ export const NavLinks = styled(LinkS)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   height: 100%;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 25%; // Try using percentage instead of fixed pixels
-    left: 0;
+    bottom: 28px;
+    left: 50%;
     width: 0;
-    height: 1px;
-    background-color: #ffd700;
-    transition: width 0.3s ease;
-  }
-
-  /* Handle the width of the underline to match the text */
-  &:hover::after {
-    width: calc(100% - 2rem); // Accounting for padding
-    margin: 0 1rem; // Center the underline within the padding
+    height: 2px;
+    background-color: #FFD700;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    opacity: 0;
   }
 
   &:hover {
-    color: #fff;
+    color: #FFD700;
+    
+    &::after {
+      width: 30px;
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    color: #FFD700;
+    
+    &::after {
+      width: 30px;
+      opacity: 1;
+    }
   }
 `;
+
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
   @media screen and (max-width: 768px) {
     display: none;
-    sp
-    
   }
 `;
 
 export const NavBtnLink = styled(LinkR)`
-  background-color: #333333;
-  color: #ffd700;
-  border: 1.5px solid #ffd700;
-  padding: 8px 25px;
-  font-size: 1rem;
-  font-weight: bold;
+  background-color: transparent;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  padding: 10px 28px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 1;
-  border-radius: 50px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: -10px;
     width: 0;
     height: 100%;
-    background-color: #ffd700;
-    transition: width 0.3s ease;
+    background-color: #FFD700;
+    transform: skewX(-20deg);
+    transition: width 0.4s ease;
     z-index: -1;
   }
 
   &:hover {
-    color: #333333;
+    color: #000;
+    border-color: #FFD700;
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.2);
+    transform: translateY(-2px);
   }
 
   &:hover::before {
-    width: 100%;
+    width: 120%;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
   }
 `;
