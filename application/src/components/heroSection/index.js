@@ -11,9 +11,6 @@ import { PhoneCallButton } from "../ButtonElements";
 import { FaPhone } from 'react-icons/fa';
 import Video from "../../videos/bgvideo.mp4";
 import "../../App.css";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
