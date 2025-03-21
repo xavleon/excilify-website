@@ -5,8 +5,6 @@ import {
   VideoBg,
   HeroContent,
   HeroBtnWrapper,
-  ArrowForward,
-  ArrowRight,
   HeroSubTitle,
 } from "./HeroElements";
 import { PhoneCallButton } from "../ButtonElements";
